@@ -1,0 +1,557 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Anya ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #e8a2b4;
+    --dark-pink: #bd647e;
+    --cream: #fff8f3;
+    --gold: #c6a36a;
+    --text: #684653;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff4f2, #f9dce5, #fff8f3);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* Floating hearts */
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #d98ca5;
+    opacity: .5;
+    pointer-events: none;
+    animation: floatUp linear infinite;
+    z-index: 0;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Main section */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 18px;
+    position: relative;
+    z-index: 1;
+}
+
+.container {
+    max-width: 750px;
+    width: 100%;
+    background: rgba(255,255,255,.76);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 28px;
+    padding: 45px 25px;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(155,85,110,.13);
+}
+
+.subtitle {
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 18px;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(55px, 10vw, 90px);
+    font-weight: 400;
+    color: var(--dark-pink);
+    line-height: 1.2;
+}
+
+.intro {
+    margin: 15px auto 30px;
+    max-width: 500px;
+    line-height: 1.9;
+    font-size: 14px;
+    color: #896b77;
+}
+
+.divider {
+    width: 65px;
+    height: 2px;
+    background: var(--gold);
+    margin: 25px auto;
+}
+
+/* Cake */
+
+.cake-area {
+    margin: 35px auto;
+}
+
+.cake-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.cake {
+    position: relative;
+    width: 210px;
+    height: 180px;
+    margin: 35px auto 20px;
+    cursor: pointer;
+}
+
+.plate {
+    position: absolute;
+    bottom: 8px;
+    left: 5px;
+    width: 200px;
+    height: 15px;
+    background: #e5b8c3;
+    border-radius: 50%;
+    box-shadow: 0 5px 0 #d69eae;
+}
+
+.cake-base {
+    position: absolute;
+    bottom: 23px;
+    left: 30px;
+    width: 150px;
+    height: 75px;
+    background: linear-gradient(to bottom, #f5b9c8, #e995ad);
+    border-radius: 12px 12px 18px 18px;
+    box-shadow: inset 0 -8px rgba(176,91,119,.12);
+}
+
+.cake-top {
+    position: absolute;
+    bottom: 88px;
+    left: 30px;
+    width: 150px;
+    height: 24px;
+    background: #fff0e8;
+    border-radius: 50%;
+    border: 3px solid #f1c4ce;
+}
+
+.candle {
+    position: absolute;
+    bottom: 109px;
+    left: 100px;
+    width: 10px;
+    height: 43px;
+    background: repeating-linear-gradient(
+        45deg,
+        #fff 0px,
+        #fff 5px,
+        #d98ba5 5px,
+        #d98ba5 10px
+    );
+    border-radius: 3px;
+}
+
+.flame {
+    position: absolute;
+    bottom: 153px;
+    left: 99px;
+    width: 13px;
+    height: 20px;
+    background: radial-gradient(circle at 50% 70%, #fff4a8, #ffb347 65%, #ff835e);
+    border-radius: 50% 50% 45% 45%;
+    transform-origin: bottom;
+    animation: flicker .7s infinite alternate;
+    box-shadow: 0 0 15px #ffbd69;
+}
+
+@keyframes flicker {
+    from { transform: rotate(-5deg) scale(.9); }
+    to { transform: rotate(5deg) scale(1.1); }
+}
+
+.cake-blown .flame {
+    display: none;
+}
+
+.cake-instruction {
+    font-size: 12px;
+    color: #a77d8c;
+}
+
+/* Buttons */
+
+.main-btn {
+    display: inline-block;
+    border: none;
+    padding: 13px 28px;
+    margin: 8px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #d9829e, #b85d7c);
+    color: white;
+    font-size: 13px;
+    letter-spacing: 1px;
+    box-shadow: 0 6px 18px rgba(184,93,124,.25);
+    transition: .3s;
+}
+
+.main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 9px 23px rgba(184,93,124,.35);
+}
+
+.music-btn {
+    background: #fff;
+    border: 1px solid #e8bdc9;
+    color: var(--dark-pink);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 12px;
+}
+
+/* Letter */
+
+.letter {
+    display: none;
+    margin: 30px auto 0;
+    padding: 30px 23px;
+    max-width: 570px;
+    background: #fffaf7;
+    border: 1px solid #ecd2d8;
+    border-radius: 18px;
+    text-align: left;
+    animation: reveal .8s ease;
+}
+
+.letter.show {
+    display: block;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.letter h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 42px;
+    color: var(--dark-pink);
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.letter p {
+    font-size: 13px;
+    line-height: 2;
+    margin-bottom: 15px;
+    color: #775b66;
+}
+
+.signature {
+    text-align: right;
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px !important;
+    color: var(--dark-pink) !important;
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 35px;
+    font-size: 11px;
+    color: #b68b99;
+    letter-spacing: 2px;
+}
+
+.hidden {
+    display: none;
+}
+
+@media(max-width:480px) {
+    .container {
+        padding: 35px 18px;
+    }
+
+    .letter {
+        padding: 24px 17px;
+    }
+
+    .letter p {
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<audio id="birthdayMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<section class="hero">
+
+<div class="container">
+
+    <div class="subtitle">A little surprise made with love</div>
+
+    <h1>Happy Birthday</h1>
+
+    <h2 style="font-family:'Playfair Display'; font-size:25px; color:#bd647e;">
+        MY ANYAAA ❤️
+    </h2>
+
+    <div class="divider"></div>
+
+    <p class="intro">
+        Two days before your special day, I prepared something
+        special for the most wonderful person in my life.
+        This little website is made especially for you, mahal ko.
+    </p>
+
+    <div class="cake-area">
+
+        <div class="cake-title">Make a wish, my love! 🎂</div>
+
+        <div class="cake" id="cake" onclick="blowCandles()">
+
+            <div class="plate"></div>
+            <div class="cake-base"></div>
+            <div class="cake-top"></div>
+            <div class="candle"></div>
+            <div class="flame"></div>
+
+        </div>
+
+        <p class="cake-instruction" id="cakeInstruction">
+            Tap the cake to blow out your candle ✨
+        </p>
+
+    </div>
+
+    <button class="main-btn" onclick="openLetter()">
+        OPEN YOUR SURPRISE 💌
+    </button>
+
+    <br>
+
+    <button class="music-btn" onclick="toggleMusic()" id="musicButton">
+        ♫ Play Birthday Music
+    </button>
+
+    <div class="letter" id="letter">
+
+        <h2>To My Anya ❤️</h2>
+
+        <p>
+            My dearest Anya,
+        </p>
+
+        <p>
+            2 DAYS BEFORE YOUR BIRTHDAY MAHAL KO!
+            ETONG UNANG BDAY MO KASAMA AKO.
+            SALAMAT SA DUMATING KA SA BUHAY KO.
+            MAHAL NA MAHAL KITA ANYA KO.
+        </p>
+
+        <p>
+            MAY MGA TIME NA NAG AAWAY TAYO PERO
+            D SYA AWAY FOR ME EH. SANA MAHAL,
+            TIISIN MO PA UGALI KO HA.
+            IKAW LANG SAFEPLACE KO PO ANYA KOOO.
+        </p>
+
+        <p>
+            ANG WISH KO LANG MAGKASAMA TAYO PALAGI,
+            TUMUPAD NG TUNGKULIN PO.
+            ILOVEYOUU ANYA KOOO!
+        </p>
+
+        <p>
+            I hope this little surprise makes you smile.
+            You deserve all the happiness, love, and
+            beautiful things this world can offer.
+            I am so thankful that I get to celebrate
+            another special moment with you.
+        </p>
+
+        <p>
+            Happy birthday in advance, my love!
+            Here's to more memories, more laughter,
+            and more birthdays together. ❤️
+        </p>
+
+        <p class="signature">
+            Forever yours,<br>
+            Your Mahal ❤️
+        </p>
+
+    </div>
+
+    <footer>
+        MADE WITH LOVE, JUST FOR YOU ♡
+    </footer>
+
+</div>
+
+</section>
+
+<script>
+
+// Floating hearts animation
+
+function createHeart() {
+    const heart = document.createElement("div");
+
+    heart.className = "heart";
+    heart.innerHTML = "♥";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (12 + Math.random() * 20) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 6) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => heart.remove(), 11000);
+}
+
+setInterval(createHeart, 650);
+
+
+// Birthday cake interaction
+
+let candleBlown = false;
+
+function blowCandles() {
+
+    if (candleBlown) return;
+
+    candleBlown = true;
+
+    document.getElementById("cake").classList.add("cake-blown");
+
+    document.getElementById("cakeInstruction").innerHTML =
+        "YAY! Your wish is on its way, my love! ✨❤️";
+
+    createConfetti();
+}
+
+
+// Simple confetti animation
+
+function createConfetti() {
+
+    const symbols = ["♥", "✨", "✿", "♡"];
+
+    for (let i = 0; i < 35; i++) {
+
+        const item = document.createElement("div");
+
+        item.innerHTML = symbols[Math.floor(Math.random() * symbols.length)];
+
+        item.style.position = "fixed";
+        item.style.left = Math.random() * 100 + "vw";
+        item.style.top = "-20px";
+        item.style.zIndex = "999";
+        item.style.pointerEvents = "none";
+        item.style.color = ["#d9829e", "#c6a36a", "#f5a9ba"][i % 3];
+        item.style.fontSize = (12 + Math.random() * 15) + "px";
+        item.style.transition = "transform 3s linear, opacity 3s";
+
+        document.body.appendChild(item);
+
+        setTimeout(() => {
+            item.style.transform =
+                `translateY(${window.innerHeight + 100}px) rotate(500deg)`;
+            item.style.opacity = "0";
+        }, 50);
+
+        setTimeout(() => item.remove(), 3200);
+    }
+}
+
+
+// Surprise letter
+
+function openLetter() {
+
+    const letter = document.getElementById("letter");
+
+    letter.classList.toggle("show");
+
+    if (letter.classList.contains("show")) {
+        letter.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+        createConfetti();
+    }
+}
+
+
+// Background music
+
+const music = document.getElementById("birthdayMusic");
+const musicButton = document.getElementById("musicButton");
+
+async function toggleMusic() {
+
+    if (music.paused) {
+
+        try {
+            await music.play();
+            musicButton.innerHTML = "♫ Pause Music";
+        } catch (error) {
+            musicButton.innerHTML = "Music unavailable - check music.mp3";
+        }
+
+    } else {
+
+        music.pause();
+        musicButton.innerHTML = "♫ Play Birthday Music";
+
+    }
+}
+
+music.addEventListener("ended", () => {
+    musicButton.innerHTML = "♫ Play Birthday Music";
+});
+
+</script>
+
+</body>
+</html>
